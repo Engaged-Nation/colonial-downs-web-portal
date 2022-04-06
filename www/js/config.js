@@ -10,7 +10,7 @@ if (!EngagedNation.Config.hasOwnProperty("requireJS")) {
     EngagedNation.Config.requireJS = {};
 }
 
-/* Use the extended version of lbxgrid for Tachi Tablet */
+/* Use the extended version of lbxgrid for Colonial Downs Web */
 EngagedNation.Config.requireJS = {
     "paths" : {
         "embedInit": "js/embed/init",

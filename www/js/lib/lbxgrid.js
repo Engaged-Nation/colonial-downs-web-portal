@@ -1,5 +1,5 @@
 /**
- * Tachi Tablet version of lbxgrid
+ * Colonial Downs Web version of lbxgrid
  *
  * @author Matthew Kosolofski <matthew.kosolofski@engagednation.com>
  */

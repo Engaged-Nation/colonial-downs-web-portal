@@ -1,0 +1,325 @@
+@import (reference) "master.less";
+@import (reference) "button.less";
+
+.iziModal * {
+    -webkit-font-smoothing: initial !important;
+}
+
+#engagednation-modal {
+    background: transparent !important;
+    .fontOpenSans;
+
+    &.iziModal-rendered {
+        background: #000 !important;
+    }
+
+    &.transitionIn {
+        height: auto !important;
+    }
+
+    &.game-html-loader {
+        .iziModal-wrap {
+            overflow: hidden !important;
+        }
+    }
+
+    .iziModal-loader {
+        background: transparent url('@{configS3Url}images/misc/Color+Bar-1s-80px.svg') center center no-repeat;
+        padding: 75px;
+        background-size: 30%;
+    }
+
+    .iziModal-wrap {
+        .iziModal-content {
+            .iziModal-button-close-custom {
+                background: #fff;
+                color: #00038b;
+            }
+
+            .iziModal-content-wrapper {
+                .goBlue {
+                    color: @light-blue;
+                }
+
+                .iziModal-content-display {
+                    .space10 {
+                        padding: 10px;
+                    }
+
+                    .h1-headline {
+                        color: #ffffff;
+                        padding-bottom: 10px;
+                        .fontOpenSans;
+                        font-weight: bold;
+
+                        @media (max-width: 414px) {
+                            font-size: 30px;
+                        }
+                    }
+
+                    .additional-info {
+                        color: #ffffff;
+                        font-size: 22px;
+                        line-height: 130%;
+                        padding-top: 10px;
+                    }
+
+                    .h2-subheader {
+                        font-size: 18px;
+                        .fontOpenSans;
+                        font-weight: bold;
+                        padding: 10px 0;
+                    }
+
+                    .system-message-body {
+                        font-size: 18px;
+                        text-align: left;
+
+                        a {
+                            text-decoration: underline;
+                        }
+                    }
+
+                    .iziModal-content-header {
+                        .fontOpenSans;
+                        font-weight: bold;
+
+                        .completed-modal-div {
+                            margin: 0 auto;
+                            max-width: 500px;
+                        }
+                    }
+                }
+
+                &.reward {
+                    padding: 50px;
+
+                    .iziModal-content-display {
+                        padding: 25px;
+
+                        .iziModal-content-header {
+                            color: #FFF !important;
+
+                            .completed-header-title {
+                                .fontOpenSans;
+                                font-weight: bold;
+                                font-size: 30px;
+                                text-transform: uppercase;
+                                line-height: normal;
+
+                                @media (max-width: 414px) {
+                                    font-size: 26px;
+                                }
+
+                                .goBlue {
+                                    color: @light-blue;
+                                }
+                            }
+
+                            .completed-you-won-text {
+                                .fontOpenSans;
+                                font-size: 22px;
+                                text-transform: capitalize;
+                                font-weight: normal;
+                                padding: 10px 0;
+
+                                @media (max-width: 414px) {
+                                    font-size: 20px;
+                                }
+                            }
+                        }
+
+                        .iziModal-content-display-body {
+                            min-height: auto !important;
+
+                            .reward-list-group-item {
+                                .reward-list-points {
+                                    color: #ffffff;
+                                    font-size: 30px;
+                                    line-height: normal;
+                                    text-transform: uppercase;
+                                    white-space: nowrap;
+                                    .fontOpenSans;
+                                    font-weight: bold;
+
+                                    @media (max-width: 499px) {
+                                        line-height: normal;
+                                        white-space: unset;
+                                    }
+
+                                    @media (max-width: 414px) {
+                                        font-size: 22px;
+                                    }
+                                }
+
+                                .reward-list-drawing-entries {
+                                    .reward-list-points;
+
+                                    .drawing-entries {
+                                        color: @lockitlink-darkyellow !important;
+                                    }
+                                }
+
+                                .voucher-title {
+                                    font-size: 30px;
+                                    .fontOpenSans;
+                                    font-weight: bold;
+                                    color: #ffffff;
+                                }
+
+                                .text-reward-plus {
+                                    .fontOpenSans;
+                                    font-size: 22px;
+                                    text-transform: capitalize;
+                                    font-style: italic;
+                                    font-weight: normal;
+                                    color: #ffffff;
+
+                                    @media (max-width: 414px) {
+                                        font-size: 20px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .additional-copy {
+                    .fontOpenSans;
+                    color: #fff;
+                    font-size: 18px;
+                    line-height: 125%;
+                    margin-top: 5px;
+                }
+
+                .modal-button-wrapper {
+                    margin-top: 20px;
+
+                    .modal-button-style {
+                        font-size: 16px !important;
+                    }
+                }
+
+                #component-question-trivia {
+                    padding: 0;
+
+                    .api-client-game-title {
+                        background: #027cd2;
+                        background: -moz-radial-gradient(center, ellipse cover, #027cd2 0, #0038b8 100%);
+                        background: -webkit-radial-gradient(center, ellipse cover, #027cd2 0,#0038b8 100%);
+                        background: radial-gradient(ellipse at center, #027cd2 0,#0038b8 100%);
+                        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#027cd2', endColorstr='#0038b8',GradientType=0 );
+                        padding: 15px 0;
+
+                        h3 {
+                            color: #ffffff;
+                            font-size: 30px;
+                            .fontOpenSans;
+                            font-weight: bold;
+                            margin-bottom: 0;
+                        }
+                    }
+
+                    #component-question-trivia-form {
+                        padding: 30px;
+                        font-size: 22px;
+                        .fontOpenSans;
+                        background-color: @lockitlink-darkblue;
+                        color: #fff;
+
+                        label {
+                            font-weight: normal;
+                            color: #ffffff;
+                            padding-left: unset;
+                        }
+
+                        .modal-button-wrapper {
+                            padding-top: 10px;
+                        }
+                    }
+                }
+
+                #match-3-body {
+                    padding: 0 0 20px 0;
+                    background-color: @lockitlink-darkblue;
+                    color: #ffffff;
+
+                    .api-client-game-title {
+                        background: #027cd2;
+                        background: -moz-radial-gradient(center, ellipse cover, #027cd2 0, #0038b8 100%);
+                        background: -webkit-radial-gradient(center, ellipse cover, #027cd2 0,#0038b8 100%);
+                        background: radial-gradient(ellipse at center, #027cd2 0,#0038b8 100%);
+                        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#027cd2', endColorstr='#0038b8',GradientType=0 );
+                        padding: 15px 0;
+                        margin-bottom: 20px;
+
+                        h3 {
+                            color: #ffffff;
+                            font-size: 30px;
+                            .fontOpenSans;
+                            font-weight: bold;
+                            margin-bottom: 0;
+                        }
+                    }
+
+                    p {
+                        padding: 15px;
+                    }
+                }
+
+                #photo-recall-body {
+                    padding: 0 0 30px 0;
+                    background-color: @lockitlink-darkblue;
+                    color: #ffffff;
+
+                    form {
+                        p {
+                            color: #ffffff;
+                            padding: 20px 20px 0 20px;
+                        }
+
+                        .modal-input-wrapper {
+                            padding: 20px;
+                        }
+
+                        .btn-primary {
+                            .button;
+                        }
+                    }
+
+                    .photo-recall-timer {
+                        color: #ffffff;
+                    }
+
+                    .api-client-game-title {
+                        background: #027cd2;
+                        background: -moz-radial-gradient(center, ellipse cover, #027cd2 0, #0038b8 100%);
+                        background: -webkit-radial-gradient(center, ellipse cover, #027cd2 0,#0038b8 100%);
+                        background: radial-gradient(ellipse at center, #027cd2 0,#0038b8 100%);
+                        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#027cd2', endColorstr='#0038b8',GradientType=0 );
+                        padding: 15px 0;
+
+                        h3 {
+                            color: #ffffff;
+                            font-size: 30px;
+                            .fontOpenSans;
+                            font-weight: bold;
+                            margin-bottom: 0;
+                        }
+                    }
+
+                    .component-photo-recall-form {
+                        padding: 30px 30px 0 30px;
+                        background-color: @lockitlink-darkblue;
+
+                        .body-p-left {
+                            color: #ffffff;
+                            font-size: 22px;
+                            line-height: 130%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

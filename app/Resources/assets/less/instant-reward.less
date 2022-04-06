@@ -1,0 +1,72 @@
+@import (reference) "master.less";
+
+.instant-reward-header {
+    color: #0038b8;
+    font-size: 50px;
+    .fontOpenSans;
+    font-weight: bold;
+    text-align: center;
+    line-height: 120%;
+    text-transform: uppercase;
+    padding: 25px 25px 5px 25px;
+
+    @media (max-width: 650px) {
+        font-size: 35px;
+    }
+
+    @media (max-width: 485px) {
+        font-size: 20px;
+    }
+}
+
+.instant-reward-form-header {
+    margin: 0 0 -10px 0;
+}
+
+.instant-reward-subheader {
+    color: #0038b8;
+    font-size: 40px;
+    .fontOpenSans;
+    font-weight: bold;
+    text-align: center;
+    text-transform: initial;
+    line-height: 175%;
+    margin: -25px 0 0 0;
+
+    p {
+        &.instant-reward-points {
+            #instant-reward-points;
+        }
+    }
+
+    @media (max-width: 650px) {
+        font-size: 30px;
+    }
+
+    @media (max-width: 485px) {
+        font-size: 20px;
+        margin: -15px 0 0 0;
+    }
+}
+
+#instant-reward-points {
+    color: #A97630;
+    font-size: 50px;
+    .fontOpenSans;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 120%;
+
+    @media (max-width: 485px) {
+        font-size: 25px;
+    }
+}
+
+#instant-reward-experience {
+    #instant-reward-points;
+}
+
+#instant-reward-drawing-entries {
+    #instant-reward-points;
+}

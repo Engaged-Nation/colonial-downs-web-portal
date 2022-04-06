@@ -1,0 +1,347 @@
+#
+# html+ means html tags are allowed (htmlentities is not used).
+# >- symbols allows a multiline format, line break will be converted to space and \n will be removed at the end of string.
+#
+# https://symfony.com/doc/current/components/yaml/yaml_format.html
+#
+
+#
+# fzone
+#
+fzone:
+  #
+  # tabs
+  #
+  tabs:
+    welcome: "Welcome"
+    earn: "Games"
+    challenges: "Challenges"
+    arcadegames: "Arcade Games"
+    casinogames: "Casino Games"
+    redeem: "Rewards"
+    achievements: "Achievements"
+    games: "Arcade Games"
+    xlogins: "Spin 'N Win" # spin the wheel
+    profile: "PROFILE"
+    sitefeedback: "HOW TO PLAY"
+
+
+  instantRewards:
+    header: "<div class='instant-reward-header'>CONGRATULATIONS!</div>"
+    subheader: "<div class='instant-reward-subheader'>You Won</div>"
+    prize:
+      points: "<div class='instant-reward-points'>%points% %aliasPoints%</div>"
+      drawingEntries: ""
+      experience: ""
+
+  termsAndCondtions:
+    input1: "I agree to the <a class=\"loggedout-terms-and-conditions\" href=\"https://colonial-downs-uploads.s3-us-west-2.amazonaws.com/images/pdf/rules-terms.pdf\" target=\"_blank\">terms and conditions</a>."
+
+
+  #
+  # profile box
+  #
+  me:
+    icons:
+      trophies: "Awards"
+      bingo: "Bingo"
+    logout:
+      placeholders:
+        username: "EMAIL ADDRESS"
+        password: "Password"
+      titles:
+        username: "Email Address to Sign In"
+        forgotpassword: "Forgot Password"
+      title: "Get Your Choice of $10 Free Play or a 2-For-1 Buffet at Atlantis Casino Resort Spa - Just for Registering!"
+      login: "Login"
+      forgotpassword: "Forgot Password?"
+      register: "Reward Me Now!"
+      facebook: "Register With Facebook"
+      help: "Need More Help?"
+
+  #
+  # login response
+  #
+  login:
+    incorrect: '<div class="wrongpass-wrapper">
+        <div class="wrongpass-headline">LOGIN UNSUCCESSFUL</div>
+        <div class="body-p-left">
+          <div class="wrongpassbold">FORGOT USERNAME</div>
+            The username or password you entered is incorrect. Please try entering your information again to log in.
+        </div>
+        <div class="body-p-left">
+          <div class="wrongpassbold">FORGOT PASSWORD</div>
+            You can reset your password by clicking the key symbol located at the end of the password field or the "Forgot Password" link on the login page.
+        </div>
+        <div class="body-p-left">
+          <div class="wrongpassbold">STILL HAVING TROUBLE?</div>
+            <a class="btn-display-user-form-help" data-gtm-dimension="v2/Logged_Out/Initial/Link_Success/Help" data-gtm-force-stat="1">Contact us</a> for assistance.
+        </div>
+      </div>'
+    welcome: ""
+    welcomeBack: ""
+    notfound: "<div class=\"system-message-headline\"> LOGIN UNSUCCESSFUL</div>
+      <div class=\"system-message-body\">The username or password you entered is incorrect.</div>
+      <div class=\"system-message-body\">Please try entering your information again to log in.</div>"
+
+  #
+  # registration
+  #
+  register:
+    title: "<div class=\"register-headline\">
+      <div>
+        <img class=\"img-responsive logo\" src=\"https://colonial-downs-uploads.s3-us-west-2.amazonaws.com/images/home/Altantis-355x215.png\">
+      </div>
+      GET YOUR CHOICE OF
+      <div class=\"register-voucher-title\">$10 FREE SLOT PLAY</div> OR <div class=\"register-voucher-title\">2-FOR-1 BUFFET</div>
+      <span class=\"register-cname\">AT ATLANTIS CASINO RESORT SPA · RENO</span>
+    </div>"
+    description: "<div class=\"register-body\">Just fill out a little basic information and claim your reward.</div>"
+    optinemail: "Opt-In TO Email"
+    response: # response when completing registration
+      companyname: "Please enter your company name"
+      emailsubj: "Welcome to M life E rewards!"
+      iprestriction: "<div class=\"system-message-headline\">REGISTRATION INCOMPLETE</div>
+        <div class=\"system-message-body\">Unfortunately, we could not register you for an account.</div>
+        <div class=\"system-message-body\">Another individual already registered for an account from this IP address.</div>
+        <div class=\"system-message-body\">If you believe you received this message in error, contact us for further assistance.</div>"
+
+      email2: "Your email already exists within our system."
+      success: "<div class='system-message-headline'>Successfully Registered!</div>
+        <div class='system-message-body'>We are now logging you in.</div>"
+
+      #
+      # is using emailtmpl.php
+      #
+      completed: "
+        <p style='text-align:center;'>You are one step away from enjoying all the benefits of the %program%.</p><br /><br />
+        <p style='text-align:center;'>Please check your inbox or junk mail for a verification email from <br />%property%.</p><br />
+        <p style='text-align:center;'>Click the link in the email to activate your account and <br />you'll automatically
+        receive <span class='goGold goBold'>%amount% %currency%</span> toward
+        valuable rewards!</p><br />
+        <p style='text-align:center;'>Thank you for joining %program%.</p>"
+
+  logout: ""
+
+  #
+  # password reset extended - sending instruction to email
+  #
+  passwordresetrq:
+    email: "Please enter your email address. We will send you a link to reset your password."
+    success: "Your Forgot Password request was successful. Please check your email."
+    emailtosendheader: "Your Rita's Riches Password."
+
+  #
+  # forgot password
+  #
+  forgotpassword:
+    title: "<span class=\"forgot-password-header\">Forgot Username or Password</span>"
+    p1: "<p class=\"forgot-password-body-1\">Your username is the email address you provided to the Players Club at
+      Valley View Casino & Hotel.</p>
+      <p class=\"forgot-password-body-2\">To reset your password, please enter the email address you provided to the Players Club at
+      Valley View Casino & Hotel and we will send you a link to reset your password.</p>"
+
+  #
+  # sitefeedback
+  #
+  sitefeedback:
+    header: "
+      <p class=\"body-p-left\">
+        The <em>Rita's Riches</em> program from Valley View Casino & Hotel gives you the opportunity to earn %points% for
+        participating in fun activities. You can exchange %points% for your choice of rewards and enjoy them during your
+        trips to Valley View Casino & Hotel.
+      </p>
+      <br />
+      <p class=\"body-p-left\">
+        The more you play, the more %points%, rewards and instant prizes you'll win. You'll even have the opportunity to
+        win big prizes during our exclusive <em>Rita's Riches</em> member-only grand finale event where you could
+        <span class=\"body-p-left-bold\">win up to $500,000 cash</span>!
+      </p>
+      <br />
+      <p class=\"body-p-left\">
+        Valley View Casino & Hotel is proud to provide our valued players with this exclusive program. Enjoy yourself
+        and good luck!
+      </p>
+      "
+    form:
+      title: "APP SCRATCH FEVER HELP"
+      description: "<div class=\"body-p-left\">
+        Please fill out the form below to get assistance with the <span class=\"goYellow\"><em>%program%</em></span> promotion.<br><br>
+        For questions unrelated to the <em>%program%</em></span> promotion, please contact %cname% directly via our primary website.</div>"
+      thankyou: '<div class="wrongpass-wrapper">
+          <div class="wrongpassbold">WE’RE ON IT!</div><p></p>
+          <p class="body-p-left">Thank you for contacting us.</p>
+          <p class="body-p-left">Your comments were successfully submitted to our <em>%programName%</em> team.</p>
+          <p class="body-p-left">We’ll be in touch with more information as soon as possible.</p>'
+    response:
+      success: '<div class="wrongpass-wrapper">
+          <div class="wrongpassbold">WE’RE ON IT!</div><p></p>
+          <p class="body-p-left">Thank you for contacting us.</p>
+          <p class="body-p-left">Your comments were successfully submitted to our <em>%programName%</em> team.</p>
+          <p class="body-p-left">We’ll be in touch with more information as soon as possible.</p>'
+
+  #
+  # claim voucher
+  #
+  claimvoucher:
+    warningTxt: "This voucher can only be claimed once and <strong><i>must</i></strong> be validated by a M life Rewards Center Representative. 
+    Are you the M life Rewards Center Representative that will validate this voucher?"
+
+  #
+  # voucher response
+  #
+  voucher:
+    buy:
+      day: "<p class=\"modal-body-style\">Sorry, you can only purchase this voucher once per day.</p>"
+      week: "<p class=\"modal-body-style\">Sorry, you can only purchase this voucher once per week.</p>"
+      week2: "<p class=\"modal-body-style\">Sorry, you can only purchase this voucher once every 2 weeks.</p>"
+      month: "<p class=\"modal-body-style\">Sorry, you can only purchase this voucher %number% per month.</p>"
+      year: "<p class=\"modal-body-style\">Sorry, you can only purchase this voucher once per year.</p>"
+      once: "<p class=\"modal-body-style\">Sorry, you can only purchase this voucher once.</p>"
+      oneDay: "<p class=\"modal-body-style\">Sorry, you are limited to one (1) purchase per day of this voucher type.</p>"
+      onetime: "<p class=\"modal-body-style\">Sorry, you are limited to one (1) purchase per person of this voucher type.</p>"
+      oneTimeWeekly: "<p class=\"modal-body-style\">Sorry, you are limited to one (1) purchase per week of this voucher type.</p>"
+      twoTimeWeekly: "<p class=\"modal-body-style\">Sorry, you are limited to two (2) purchase per week of this voucher type.</p>"
+      dailyPurchaseLimit: "Sorry, you are limited to %limit% purchase per day."
+      weeklyPurchaseLimit: "Sorry, you are limited to %limit% purchase per week."
+    success: "<div class=\"reward-success-wrapper\"><h3 class=\"modal-header-style\">Congratulations!</h3>
+      <div class=\"body-p\">You successfully exchanged <span class=\"modal-body-price-style\">%voucherAmount% %points%</span> for <span class=\"modal-body-price-style\"> %voucherTitle%.</span></div>
+      <div class=\"body-p\">Your reward has been emailed to you.</div>
+      <div class=\"body-p\">To view your reward history online, click the button below.</div><div>"
+
+  #
+  # my vouchers tab
+  #
+  myvouchers:
+    bodycopy: "<p class=\"body-p\">View your active prizes and redeem them by swiping your Premiere Club card at any Tachi Palace Casino Resort kiosk on the dates shown below.</p>"
+    details: '<p class="myvoucher-issuedTo" style="display:none;"><span class="goGold">Player Name</span>: %issuedTo%</p>
+      <p class="myvoucher-playersCard" style="display:none;"><span class="goGold">Premiere Club Card Number</span>: %playerscard%</p>
+      <p class="myvoucher-email" style="display:none;"><span class="goGold">Email Address</span>: %email%</p>
+      <p class="myvoucher-issuedDate" style="display:none;"><span class="goGold">Date Issued</span>: %issued_date%</p>
+      <p class="myvoucher-expireDate" style="display:none;"><span class="goGold">Expiration Date</span>: %expire_date%</p>
+      <p class="myvoucher-vid" style="display:none;"><span class="goGold">Voucher ID</span>: %vid%</p>
+      <p class="myvoucher-description" style="display:none;"><span class="goGold">Description</span>: %description%</p>
+      <p class="myvoucher-legal" style="display:none;"><span class="goGold">Legal</span>: %legal%</p>'
+    issueddate: '<p><span class="goGold">Date Issued</span>: %issued_date%</p>'
+    expirationdate: "<p><span class=\"goGold\">Expiration Date</span>: %expire_date%, 11:59 PM</p>"
+    footer: ""
+    claimed: "<div style=\"margin-right: 5px; color: red;\">This Voucher Has Been Claimed</div>"
+    alreadyclaimed: "This reward was emailed to you on %issued_date%."
+
+  #
+  # bonus code
+  #
+  bonuscode:
+    p1: "Special bonus codes are periodically given to %program% members. If you are one of the lucky winners who
+    received a code, please enter it in the text box below for a special surprise!"
+    response:
+      pointsawarded: "<p class='game-completed-header'>You Did It!</p>
+          <p style='text-align: center !important; text-transform: uppercase !important;'>Thank you for playing.</p>
+          <p style='text-align: center !important;'>You were awarded <span style='color: #fbb032 !important;'>%amount% %points%</span>!</p>"
+      nobonuscode: "<div class=\"modal-body-style\">
+       <p>Hmm, the code you entered seems to be invalid.</p><br>
+       <p>Please check your code and enter it again.</p>
+       </div>"
+      invalidcode: "Sorry, the Bonus Code you entered is invalid."
+      codeNotAvailable: "Sorry, the Bonus Code you entered is expired and is no longer available."
+
+  #
+  # bonus code bingo
+  #
+  bonuscodebingo:
+    error:
+      redemptionLimit: "THANK YOU FOR PLAYING. UNFORTUNATELY, THIS CODE HAS ALREADY BEEN ENTERED AND CANNOT BE USED AGAIN."
+      dailyLimit: "Thank you for playing.  Unfortunately, you have already entered the maximum number of bonus codes you can redeem today."
+      alreadyUsed: "Thank you for playing.  Unfortunately, this bonus code has already been used.  Please try entering a new code."
+    description: "With 13 different properties in Las Vegas, there's ALWAYS something fun and cool to do.  Now you'll
+    get rewarded just for doing things you planned to do anyway!  Simply visit our properties below, have fun, get a
+    bonus code and when you collect 6, you'll win a GOLDEN LION INSTANT REWARD!"
+
+
+  #
+  # my voucher awarded and btn
+  #
+  awardedVoucher:
+    thankYouVoucherPick4: "
+      <h2><span id=\"awarded-voucher-title\">%voucherTitle%</span></h2>
+    "
+    isvoucher: "Redeem My Voucher"
+
+  #
+  # promo pick 4
+  #
+  pick4Promo:
+    title: "Pick and Click!"
+    p1: "Choose wisely and enjoy your reward!"
+
+  #
+  # authentication
+  #
+  auth:
+    inboxsubject: "Welcome to %program%!"
+    inboxbody: "Welcome to %program%!<br /><br />I'm thrilled to personally welcome you to our new online casino rewards
+      program.<br /><br />It's easy, fun and 100% FREE to play and win on %program%!<br /><br />You'll earn M credits
+      every time you log in and play Spin 'N Win; earn even more by playing a wide variety of games such as Memory Match,
+      Three-Card Monte and Crossword. Then, exchange your M credits for exclusive rewards you can redeem at M life Rewards Desk,
+      Resort & Spa-like free play, dining offers, spa discounts and more.<br /><br />M life prides itself on
+      offering innovative programs that bring you value and excitement. Have fun and good luck.<br /><br />Now, go play!<br /><br />
+      Executive Director of Marketing<br />M life"
+
+#
+# Email template to confirm registration
+#
+emailConfirmation:
+  body:
+    header: "%fname%, <br/> Activate Your Account to<br/> Get %points_per_register% M credits!"
+
+  footer:
+    companywebsite: "www.mlife.com"
+    companyadress: ""
+    customerservice: "https://www.mlife.com"
+
+  links:
+    program: "https://www.mlife.com"
+    socialmedia:
+      facebook: ""
+      instragram: ""
+      twitter: ""
+
+gameCompleted:
+  header: "<div class=\"completed-modal-div\">CONGRATULATIONS!</div>"
+  subheader: "<div class=\"completed-modal-div\">You played this game today
+              and Rita awarded you:</div>"
+  prize:
+    points: "<div class=\"instant-reward-points game-completed-padding\">%points% %aliasPoints%</div>
+    <div class=\"game-completed-body-small\">Please come back soon</div>
+    <div class=\"game-completed-body-small\">to play again and win more!</div>"
+    drawingEntries: ""
+    experience: ""
+    voucher:
+      btn: "View My Voucher"
+
+email:
+  response:
+    subject: "Your NIGA Reward is here!"
+
+system:
+  session:
+    expired: "<div class='session-expired-wrapper'>
+      <span class='session-expired-header'>YOUR SESSION HAS EXPIRED.</span>
+      <div class='session-expired-body'>
+        Please refresh your browser to continue. If you have opened this site in multiple tabs or browsers, please close the duplicate tabs/browsers.
+      </div></div>"
+
+api:
+  instant:
+    reward:
+      sms:
+        noNumberDisplayTitle: "<h4>Your reward is ready!</h4><div>Enter your phone number to receive a text message with a link to your reward voucher.</div>"
+        noNumberDisplayPlaceholder: "Format: 000-000-000"
+        noNumberInvalidDisplayTitle: "Oops, We could not send your reward"
+        noNumberInvalidDisplayMessage: "Please check the phone number and re-enter it with dashes between the numbers <strong>Ex. 000-000-0000</strong>"
+        successDisplayTitle: "Your reward has been sent!"
+        successDisplayMessage: "Access your reward any time by clicking the link in your text message. Enjoy!"
+        iconClass: "fas fa-phone"
+
+sms:
+  message: 'Your Gridiron Grab prize from Engaged Nation is here! %url%'

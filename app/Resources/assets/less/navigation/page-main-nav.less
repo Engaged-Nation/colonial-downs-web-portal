@@ -1,0 +1,204 @@
+@import (reference) "../master.less";
+
+#page-main-nav {
+    background-color: #ffffff;
+    border:none;
+    max-width: 1170px;
+    margin: 0 auto;
+
+    @media (max-width: 1199px) {
+        max-width: 970px;
+    }
+
+    @media (max-width: 991px) {
+        max-width: 750px;
+    }
+
+    .navbar-brand {
+        padding: 0 0 0 10px;
+
+        img {
+            height: 100%;
+
+            @media (max-width: 320px) {
+                height: 90%;
+            }
+        }
+    }
+
+    .navbar-toggle {
+        box-shadow: unset;
+
+        &:hover {
+            background-color: #A97630;
+            .icon-bar {
+                background-color: #FFFFFF;
+            }
+        }
+
+        &:active {
+            background-color: #6C482F;
+            .icon-bar {
+                background-color: #FFFFFF;
+            }
+        }
+
+        &:focus {
+            background-color: #6C482F;
+
+            .icon-bar {
+                background-color: #FFFFFF;
+            }
+        }
+    }
+
+    .icon-bar {
+        background-color: #A97630;
+    }
+
+    .nav {
+        li {
+            a {
+                .fontOpenSans;
+                font-weight: bold;
+                text-align: center;
+                color: #A97630;
+                text-transform: uppercase;
+                font-size: 14px;
+
+                @media (max-width: 991px) {
+                    font-size: 11px;
+                }
+
+                span {
+                    &.fa {
+                        font-size: 17px;
+                        height: 17px;
+                    }
+                    &.fas {
+                        font-size:17px;
+                        height: 17px;
+                    }
+
+                    @media (min-width: 768px) {
+                        display: block;
+                        margin-bottom: 5px;
+                    }
+                }
+
+                span.fa-caret-down, .en-user-first-name {
+                    display: inline-block;
+                }
+
+                &:hover {
+                    background-color: #A97630;
+                    color: #FFFFFF;
+
+                    span {
+                        &.fa {
+                            font-size:18px;
+                            height: 18px;
+
+                            @media (max-width: 768px) {
+                                font-size:17px;
+                                height: 17px;
+                            }
+                        }
+                        &.fas {
+                            font-size:18px;
+                            height: 18px;
+
+                            @media (max-width: 768px) {
+                                font-size:17px;
+                                height: 17px;
+                            }
+                        }
+                        &.fa-caret-down {
+                            font-size: 17px;
+                            height: 17px;
+                        }
+                    }
+                }
+            }
+
+            &.active {
+                a {
+                    background-color: #A97630;
+                    color: #ffffff;
+
+                    span {
+                        &.fa {
+                            font-size:18px;
+                            height: 18px;
+
+                            @media (max-width: 768px) {
+                                font-size:17px;
+                                height: 17px;
+                            }
+                        }
+                        &.fas {
+                            font-size:18px;
+                            height: 18px;
+
+                            @media (max-width: 768px) {
+                                font-size:17px;
+                                height: 17px;
+                            }
+                        }
+                        &.fa-caret-down {
+                            font-size: 17px;
+                            height: 17px;
+                        }
+                    }
+                }
+
+            }
+        }
+
+        .open {
+            > a {
+                background-color: #A97630;
+                color: #ffffff;
+
+                span {
+                    &.fa {
+                        font-size:18px;
+                        height: 18px;
+                    }
+                    &.fas {
+                        font-size:18px;
+                        height: 18px;
+                    }
+                    &.fa-caret-down {
+                        font-size: 17px;
+                        height: 17px;
+                    }
+                }
+            }
+        }
+    }
+
+    .dropdown {
+        .dropdown-menu {
+            background-color: #A97630;
+
+            li {
+                a {
+                    color: #ffffff;
+
+                    &:hover {
+                        background-color: #FFFFFF;
+                        color: #A97630;
+                    }
+                }
+
+                &.active {
+                    a {
+                        background-color: #FFFFFF;
+                        color: #A97630;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,60 @@
+<div class="loginForm col-md-12">
+    <div id="account" class="logged-out-account">
+        <div class="loggedout-form-header-logo">
+            <img class="img-responsive" src="{{ global_en_config.environment.s3_uploads_url ~ '/images/logout/Altantis-400h.png' }}" />
+        </div>
+        <form class="loginFormOverride" id="dologin" method="get" autocomplete="off">
+            <div class="row transparent centerMarginMagic">
+                <div class="col-md-12">
+                    <div class="row hidden">
+                        <div class="col-md-12">
+                        {% if global_en_config.getDatabaseConfig('is_fe_registerButton') %}
+                            <div class="loginButtonWrapper ">
+                                <button type="button" data-gtm-dimension="Register" class="onregister modal-button-style en-button-animations-shrink-effect" style="display: none;">{{ 'fzone.me.logout.register'|trans({}, 'frontend') }}</button>
+                            </div>
+                        {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <input type="hidden" name="embed" value="login.register"/>
+            <input type="hidden" name="submit" value="true"/>
+            <input type="hidden" name="redirect" value="{{ returnlogreg }}"/>
+            <input type="hidden" name="action" value="login"/>
+        </form>
+        <div class="clearBoth"></div>
+    </div>
+</div>
+
+
+<script>
+    EngagedNation.RequireJS.require(
+        ["jquery_1_10"],
+        function($)
+        {
+            $(function () {
+                $('body').css('padding-bottom', 0);
+
+                /**
+                 * @todo Add completed listener to google tag manager then we can replace the interval below with the event listener.
+                 * This will ensure us that the google tag manager is completely loaded on both stats.
+                 */
+                var googleTagManagerCompletedId = null;
+                googleTagManagerCompletedId = setInterval(
+                    function() {
+                        if (
+                            !EngagedNation.hasOwnProperty('GoogleTagManagerClient') ||
+                            !EngagedNation.GoogleTagManagerClient.loadDimensionsStatus ||
+                            !EngagedNation.GoogleTagManagerClient.loadDimensionsSourceStatus
+                        ) return;
+
+                        clearInterval(googleTagManagerCompletedId);
+                        $('.loginButtonWrapper .onregister').trigger('click');
+                    },
+                    1000
+                );
+            });
+        }
+    )
+</script>

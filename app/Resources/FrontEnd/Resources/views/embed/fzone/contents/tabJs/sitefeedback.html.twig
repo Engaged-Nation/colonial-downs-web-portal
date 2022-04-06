@@ -1,0 +1,126 @@
+<div class="row box-form-layout">
+    <div class="col-md-12">
+        <div class="h1-headline-smaller-left">{{ 'fzone.sitefeedback.form.title'|trans({'%program%' : program},'frontend')|raw }}</div>
+        <div class="body-p-lowercase">{{ 'fzone.sitefeedback.form.description'|trans({'%cname%' : cname, '%program%' : program},'frontend')|raw }}</div>
+
+        <div class="row">
+            <div class="col-md-8">
+                {% include 'FrontEnd/Resources/views/embed/fzone/contents/tabJs/sitefeedbackform.html.twig' %}
+            </div>
+
+        </div>
+    </div>
+</div>
+<script>
+    EngagedNation.RequireJS.require(
+        ["jquery_1_10"],
+        function($)
+        {
+            "use strict";
+
+            $(document).on('click', '.instVid', function(){
+                var this_ = $(this);
+
+                $.lbxgrid({
+                    /**
+                     * @todo need this to be dynamic
+                     */
+                    html: '<iframe id="ytplayer" src="https://www.youtube.com/embed/8WeJgqZ3oNg?enablejsapi=1&controls=1&rel=0&showinfo=0&wmode=opaque&autoplay=1" width="500" height="500" frameborder="0" scrolling="no" allowfullscreen></iframe><br /><br />',
+                    maxWidth: '100%'
+                });
+
+                EngagedNation.RequireJS.require(
+                    ["jquery"],
+                    function($)
+                    {
+                        $(document).trigger(
+                            $.Event(
+                                "EngagedNation:Click",
+                                {
+                                    "engagedNation" : {
+                                        "action" : "open",
+                                        "gtmDimension": this_[0].hasAttribute("data-gtm-dimension") ? this_.attr("data-gtm-dimension") : ""
+                                    }
+                                }
+                            )
+                        );
+                    }
+                );
+
+                $('iframe#ytplayer').attr('width', 800);
+                $('iframe#ytplayer').attr('height', 600);
+
+                if ($(window).width() < 800) {
+                    $('iframe#ytplayer').attr('width', $(window).width() - 100);
+                    $('.lbxgrid-content.bg').attr('max-width', $(window).width() - 100);
+                    $('iframe#ytplayer').attr('height', $(window).width() - 200);
+                }
+            });
+
+            $(window).resize(function(){
+                if($(window).width() < 800) {
+                    $('iframe#ytplayer').attr('width', $(window).width() - 100);
+                    $('.lbxgrid-content .bg').attr('max-width', $(window).width() - 100);
+                    $('iframe#ytplayer').attr('height', $(window).width() - 200);
+                }
+                else{
+                    $('iframe#ytplayer').attr('width', 800);
+                    $('.lbxgrid-content.bg').attr('max-width', 800);
+                    $('iframe#ytplayer').attr('height', 600);
+                }
+            });
+
+            $(function () {
+                $('.embed #sitefeedbackform').on('submit', function (e) {
+                    var $target = $(this);
+                    e.preventDefault();
+
+                    $('#nsitefb').html('<div class="goCenter;"><img src="{{ s3furl|e('js') }}/images/client/images/hourglass.gif" /></div>');
+                    $('input[value="Submit"]').fadeOut();
+
+                    $.ajax({
+                        type: 'GET',
+                        dataType: 'jsonp',
+                        data: $target.serialize(),
+                        jsonp: 'callback',
+                        cache: false,
+                        url: '{{ fhost|e('js') }}/embed/index.php?embed={{ embed|e('js') }}&id={{ id|e('js') }}&submit=true&pageid={{ pageid|e('js') }}&include=sitefeedback',
+                        success: function (data) {
+                            $('#nsitefb').empty();
+                            $('input[value="Submit"]').fadeIn();
+                            $.lbxgrid({
+                                html: data.html
+                            });
+                        }
+                    });
+                });
+
+                $("#help-tab li a").on(
+                    "click",
+                    function()
+                    {
+                        var this_ = $(this);
+
+                        EngagedNation.RequireJS.require(
+                            ["jquery"],
+                            function($)
+                            {
+                                $(document).trigger(
+                                    $.Event(
+                                        "EngagedNation:Click",
+                                        {
+                                            "engagedNation" : {
+                                                "action" : "open",
+                                                "gtmDimension": this_[0].hasAttribute("data-gtm-dimension") ? this_.attr("data-gtm-dimension") : ""
+                                            }
+                                        }
+                                    )
+                                );
+                            }
+                        );
+                    }
+                );
+            });
+        }
+    );
+</script>

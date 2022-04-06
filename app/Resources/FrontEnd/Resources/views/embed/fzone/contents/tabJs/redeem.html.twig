@@ -1,0 +1,135 @@
+{% extends 'FrontEnd/Resources/views/embed/fzone/contents/tabJs/redeem/base.html.twig' %}
+
+{% block filter %}
+    <div class="content-max-width">
+        <div class="clearfix">
+            <h2 class="center-block">Redeemable Rewards <span class="goGold goBold">Buy One Per Day!</span></h2>
+
+            {% if global_en_config.getDatabaseConfig('is_grinchgraphic_enabled') %}
+                <img id ="grinchGraphic" class="img-responsive" src="{{ global_en_config.environment.s3_uploads_url ~ '/images/holiday_specialevents/vview_grinchbanner.gif' }}" />
+            {% endif %}
+
+            {% if global_en_config.getDatabaseConfig('is_holiday_sale_enabled') %}
+                <h2 id="holidaySaleDescription" class="h2-subheadline">
+                    Holiday Sale<br />
+                    Prices Have Been <span class="holidaySaleDescriptionSlash">Slashed</span>!
+                </h2>
+            {% endif %}
+
+            <div class="voucher-button-wrapper center-block"><input type="button" id="viewMyVouchersButton" class="switchp button" value="View My Vouchers"/></div>
+        </div>
+        <script>
+            EngagedNation.RequireJS.require(
+                ["jquery_1_10"],
+                function($)
+                {
+                    "use strict";
+
+                    $(function(){
+                        $('#rewardsAndMyvouchers .switchp').on('click', function(){
+                            EngagedNation.RequireJS.require(
+                                ["jquery"],
+                                function($)
+                                {
+                                    $(document).trigger(
+                                        $.Event(
+                                            "EngagedNation:Click",
+                                            {
+                                                "engagedNation" : {
+                                                    "action" : "open",
+                                                    "gtmDimension": "Rewards/Vouchers"
+                                                }
+                                            }
+                                        )
+                                    );
+                                }
+                            );
+
+                            $.ajax({
+                                dataType: 'jsonp',
+                                jsonp: 'callback',
+                                cache: false,
+                                url: '{{ fhost|e("js") }}/embed/index.php?embed={{ embed|e("js") }}&id={{ id|e("js") }}&pageid={{ pageid|e("js") }}&tabjs=true&view=myvouchers',
+                                success: function (data) {
+                                    $('#rewardsAndMyvouchers').html(data.html);
+                                }
+                            });
+                        });
+                    });
+                }
+            );
+        </script>
+    </div>
+{% endblock filter %}
+{% block tabitems %}
+    <div>
+        {% if list %}
+            {% set colors = ['darkblue', 'darkblue', 'darkblue', 'darkblue', 'darkblue', 'darkblue', 'darkblue', 'darkblue', 'darkblue', 'darkblue', 'darkblue', 'darkblue', 'darkblue', 'darkblue', 'darkblue', 'darkblue', 'darkblue', 'darkblue', 'darkblue', 'darkblue', 'darkblue', 'darkblue', 'darkblue', 'darkblue', 'darkblue'] %}
+            <ul class="noselect nofloat dlistb" style="text-align: center; width: 100%;">
+                {% for item in list %}
+                    {% if item.thumbnail is not empty %}
+                        {% set image = item.thumbnail %}
+                    {% else %}
+                        {% set image = imgDefault %}
+                    {% endif %}
+                    <li class="{{ colors[loop.index0] }} item box-circles" style="float: none; width: 200px; display: inline-block; margin: 4px;">
+                        {% if item.available == item.sold %}
+                            <div class="tag">
+                                <div class="soldout"></div>
+                            </div>
+                        {% endif %}
+
+                        <div class="box-circles-bg {{ colors[loop.index0] }}-circles">
+                            <img class="enPortal-img-responsive transition" src="{{ img ~ image }}"/>
+                        </div>
+                        <div class="box-bg" style="margin: 0; position: relative;">
+                            {% if global_en_config.getDatabaseConfig('is_holiday_sale_enabled') %}
+                                {% if item.grp_note %}
+                                    <div>
+                                        <span class="holidaySaleBeforeDeal">{{ item.grp_note|number_format }} {{ points }}</span>
+                                    </div>
+                                {% endif %}
+                            {% endif %}
+
+                            <div class="earn-price">{{ item.price|number_format }} {{ points }}</div>
+                            <div class="earn-title">
+                                {% if item.title|length > 70 %}
+                                    {{ item.title[:70] }}... Read More
+                                {% else %}
+                                    {{ item.title }}
+                                {% endif %}
+                            </div>
+                            <div class="item-wrap item-desc {{ colors[loop.index0] }}-opacity">
+                                <div class="item-box">
+                                    <button class="pop btn-box- btn-box button" data-item="vouchers" data-id="{{ item.id }}" data-gtm-dimension="Achievements/{{ item.title }}">View</button>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                {% endfor %}
+            </ul>
+
+            {% block pagination %}
+                {% if paginav %}
+                    <div class="pagi_">
+                        <div class="toleft transition {{ toleft }}">
+                            <span class="enPortal-glyphicon enPortal-glyphicon-chevron-left"></span>
+                        </div>
+                        <div class="toright transition {{ toright }}">
+                            <span class="enPortal-glyphicon enPortal-glyphicon-chevron-right"></span>
+                        </div>
+                    </div>
+                {% endif %}
+            {% endblock %}
+        {% else %}
+            <div class="notextshadow">
+                <h4>COMING SOON!</h4>
+                <p>Earn as many {{ points }} as possible. You will soon be able to exchange your {{ points }} for a wide variety of rewards. The more {{ points }} you earn, the more opportunities you have to redeem special rewards in the future.</p>
+                <p>VALUABLE REWARDS & PRIZES COMING SOON!</p>
+            </div>
+        {% endif %}
+    </div>
+{% endblock tabitems %}
+
+{% block scriptmargintop %}
+{% endblock scriptmargintop %}

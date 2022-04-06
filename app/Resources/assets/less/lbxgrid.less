@@ -1,0 +1,867 @@
+@import (reference) "master.less";
+@import (reference) "base.less";
+@import (reference) "instant-reward.less";
+
+.lbxgrid {
+    .lbxgrid-wrapper {
+        @media (max-width: 425px) {
+            padding: 30px !important;
+        }
+
+        .lbxgrid-close {
+            &.xclose {
+                span {
+                    color: #FFFFFF;
+
+                    @media (max-width: 768px) {
+                        font-size: 20px !important;
+                        margin-top: -25px !important;
+                    }
+                }
+            }
+        }
+        .lbxgrid-content {
+            background: #000000;
+
+            &.bg {
+                background-image: none !important;
+                background: #000 !important;
+                border: none !important;
+                padding: 20px;
+                max-width: 350px !important;
+                text-align: left;
+
+                .lbxgrid-box {
+                    padding: 10px;
+                    border-radius: 4px;
+                    font-size: 16px;
+                    color: #fff;
+                    .fontRoboto;
+                    line-height: 125%;
+
+                    #instant-reward-form {
+                        #instantRewardsUserInputForm {
+                            max-width: 500px;
+                            padding: 0 15px;
+
+                            h3 {
+                                color: #0038b8 !important;
+                            }
+                        }
+                    }
+
+                    .wrongpass-wrapper {
+                        max-width: 490px;
+                    }
+
+                    .wrongpassbold {
+                        .fontRobotoBold;
+                        font-weight: bold;
+                    }
+
+                    .sitefeedback-spacer {
+                        display:none;
+                    }
+
+                    .modal-body-price-style {
+                        .fontRobotoBold;
+                        font-weight: bold;
+                        color: #0038b8;
+                    }
+
+                    .reward-success-wrapper {
+                        max-width: 490px;
+
+                        .modal-header-style {
+                            margin: 0 0 15px 0;
+                        }
+
+                        .body-p {
+                            color: #0038b8;
+                        }
+
+                        input {
+                            &.view-vouchers {
+                                margin-top: 15px;
+                            }
+                        }
+                    }
+
+                    .session-expired-wrapper {
+                        max-width: 400px;
+
+                        .session-expired-header {
+                            .fontRobotoBold;
+                            font-weight: bold;
+                            display: block;
+                            text-align: center;
+                            text-transform: capitalize;
+                            font-size: 28px;
+                            line-height: 120%;
+                            color: #000000;
+                        }
+
+                        .session-expired-body {
+                            text-align: left;
+                            text-transform: initial;
+                            font-size: 18px;
+                            line-height: 150%;
+                            color: #000000;
+
+                            .session-expired-body-bold {
+                                .fontRobotoBold;
+                                font-weight: bold;
+                            }
+                        }
+                    }
+
+                    .box {
+                        .forgot-password-header {
+                            text-transform: uppercase;
+                            max-width: 550px;
+                            display: block;
+                        }
+
+                        .forgot-password-body-1 {
+                            max-width: 550px;
+                            text-transform: initial;
+                            margin: 0 0 10px 0;
+                        }
+
+                        .forgot-password-body-2 {
+                            .forgot-password-body-1;
+                            margin-bottom: 15px;
+                        }
+                    }
+
+                    .lbxgrid-md {
+                        .-md-top {
+                            background: none;
+                            padding: 5px;
+                            z-index: 1;
+
+                            @media (max-width: 425px) {
+                                margin-bottom: -25px;
+                            }
+
+                            .-md-title {
+                                .fontRobotoBold;
+                                font-weight: bold;
+                                font-size: 40px;
+                                color: #0038b8;
+                                text-transform: uppercase;
+                                padding: 0;
+                                text-shadow: none;
+                                line-height: 100%;
+                                margin-bottom: 35px !important;
+
+                                @media (max-width: 768px) {
+                                    margin-bottom: 30px;
+                                }
+                            }
+                        }
+                        .-md-content {
+                            background-color: transparent;
+                            padding: 25px 20px 25px 20px;
+
+                            #games-3cardsmonte-info-button {
+                                color: #0038b8;
+                            }
+
+                            #games-crossword-info-button {
+                                color: #0038b8;
+                            }
+
+                            .-info {
+                                color: #0038b8;
+                            }
+
+                            .modal-body-style {
+                                .fontOpenSans;
+                                font-size: 20px;
+                                line-height: 150%;
+                                text-transform: initial;
+                                text-align: left !important;
+                                margin: 0;
+
+                                &.modal-body-text {
+                                    p {
+                                        text-transform: none;
+                                    }
+                                }
+                            }
+
+                            p {
+                                .fontOpenSans;
+                                font-size: 20px;
+                                line-height: 150%;
+                                text-transform: initial;
+                                text-align: left !important;
+                                margin: 0;
+                            }
+
+                            #memorymatch-holder {
+                                > div {
+                                    text-align:center !important;
+                                }
+                            }
+
+                            #match3 {
+                                .modal-body-style {
+                                    text-align: center !important;
+                                    margin-bottom: 25px;
+                                }
+                            }
+
+                            .pick4 {
+                                .pick4- {
+                                    .modal-body-style {
+                                        text-align: center !important;
+                                    }
+                                }
+                            }
+
+                            .fitbbitf {
+                                .more-info {
+                                    max-width: 490px;
+                                    margin-bottom: 15px;
+                                }
+                            }
+                        }
+                    }
+
+                    a {
+                        .text-link;
+                    }
+                }
+            }
+        }
+    }
+
+    &.display-register-page {
+        .lbxgrid-wrapper {
+            .lbxgrid-close {
+                display: none;
+            }
+
+            .lbxgrid-content {
+                &.bg {
+                    background-color: #000;
+                    border: none !important;
+                    max-width: 550px !important;
+                }
+            }
+        }
+    }
+
+    &.experiencePointsContentWrapper {
+        .lbxgrid-wrapper {
+            .lbxgrid-content {
+                max-width:550px !important;
+
+                .lbxgrid-box {
+                    padding: 10px 50px;
+                    text-align: center;
+
+                    .exp-popup-headline {
+                        .fontRobotoBold;
+                        font-weight: bold;
+                        font-size: 34px;
+                        color: #fff;
+                        text-transform: uppercase;
+                        margin: 15px;
+                    }
+
+                    .exp-popup-body {
+                        text-align: left;
+                        font-weight: 400;
+                        font-size: 18px;
+                        max-width: 450px;
+                        margin: 20px auto;
+
+                        .level-modal {
+                            .reward-text {
+                                .fontRobotoBold;
+                                font-weight: bold;
+                                font-style: italic;
+                                font-size: 16px;
+                            }
+
+                            .reward-headline {
+                                font-style: normal;
+                                font-weight: 800;
+                                font-size: 16px;
+                            }
+                        }
+                    }
+
+                    .exp-popup-callout-box {
+                        background: #000;
+                        padding: 15px;
+                        max-width: 350px;
+                        margin: 20px auto;
+
+                        .exp-callout-headline {
+                            .fontRobotoBold;
+                            font-weight: bold;
+                            font-size: 16px;
+                            text-transform: uppercase;
+                            max-width: 450px;
+                            margin: 0 auto;
+                        }
+
+                        .exp-callout-prize {
+                            .fontRobotoBold;
+                            font-weight: bold;
+                            font-size: 16px;
+                            text-transform: uppercase;
+                            color: #fff;
+                        }
+
+
+                        .exp-callout-body {
+                            font-size: 16px;
+                            font-weight: 400;
+                            max-width: 350px;
+
+                            .exp-callout-highlight {
+                                .fontRobotoBold;
+                                font-weight: bold;
+                            }
+                        }
+                    }
+
+                    .exp-prize-image-wrapper {
+                        img {
+                            display:inline-block;
+                        }
+                    }
+
+                    .exp-popup-prize {
+                        .fontRobotoBold;
+                        font-weight: bold;
+                        font-size: 16px;
+                        color: #fff;
+                        margin-top: 30px;
+                    }
+
+                    .exp-popup-description {
+                        font-size: 18px;
+                    }
+
+                    .exp-popup-play-link {
+                        .fontRobotoBold;
+                        font-weight: bold;
+                        color: #fff;
+                        font-size: 16px;
+                    }
+
+                    .exp-popup-highlight {
+                        .fontRobotoBold;
+                        font-weight: bold;
+                    }
+
+                    .exp-popup-caution {
+                        font-size: 16px;
+                        text-align: left;
+                    }
+                }
+            }
+        }
+    }
+
+    &.custom-forgotpassword {
+        .lbxgrid-wrapper {
+            .lbxgrid-content {
+                max-width: 550px !important;
+            }
+        }
+    }
+
+    &.custom-redeem {
+        .lbxgrid-wrapper {
+            .lbxgrid-content {
+                &.bg {
+                    background-color: #000000 !important;
+
+                    .lbxgrid-box {
+                        .modal-header-style {
+                            color: #FFFFFF;
+                            text-transform: uppercase;
+                            .fontRobotoBold;
+                            font-weight: bold;
+                        }
+
+                        .modal-body-price-style {
+                            color: #e3a000;
+                            text-transform: uppercase;
+                        }
+
+                        .modal-body-style {
+                            color: #FFFFFF;
+                        }
+
+                        button {
+                            &.buy-voucher {
+                                &:hover {
+                                    &:before {
+                                        transform: skewX(-45deg) translateX(17em);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &.custom-redeem-success {
+        .lbxgrid .custom-redeem;
+
+        .lbxgrid-wrapper {
+            .lbxgrid-content {
+                &.bg {
+                    .lbxgrid-box {
+                        .reward-success-wrapper {
+                            .modal-header-style {
+                                font-size: 30px;
+
+                                @media (max-width: 450px) {
+                                    font-size: 5.5vw;
+                                }
+                            }
+
+                            .modal-body-price-style {
+                                text-transform: uppercase;
+                            }
+
+                            .body-p {
+                                color: #FFFFFF;
+                                text-align: left;
+                            }
+
+                            button {
+                                &.view-vouchers {
+                                    margin-top: 20px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .lbxgrid-content {
+        &.bg {
+            background-color: #ffffff !important;
+            max-width: 350px !important;
+            border: none !important;
+
+            .lbxgrid-box {
+                button {
+                    &.view-vouchers {
+                        &:hover {
+                            &:before {
+                                transform: skewX(-45deg) translateX(19em);
+                            }
+                        }
+                    }
+                }
+            }
+
+            .unsuccessful-login-wrapper {
+                color: #000;
+            }
+
+            .h1-headline {
+                color: #fff;
+                font-size: 16px;
+                line-height: 150%;
+            }
+
+            .subheadline {
+                color: #fff;
+                .fontRobotoBold;
+                font-weight: bold;
+                font-size: 16px;
+                text-transform: uppercase;
+                text-align: center;
+                line-height: 150%;
+            }
+
+            p {
+                color: #ffffff;
+                text-align: left;
+                line-height: normal;
+
+                a {
+                    text-decoration: underline;
+                }
+            }
+
+            #doregister {
+                color: #fff;
+
+                .system-message-sub-header {
+                    font-size: 16px;
+                    text-align: center;
+                    line-height: 125%;
+                    .fontRobotoBold;
+                    color: #ffffff;
+                    padding-bottom: 15px;
+                }
+
+                p {
+                    color: #ffffff;
+                    text-align: left;
+                    line-height: normal;
+                }
+
+                .system-message-body {
+                    color: #ffffff;
+                    text-align: left;
+                }
+
+                .onresp {
+                    text-align: left;
+                    p {
+                        font-size: 16px;
+                    }
+                }
+
+                p {
+                    &.font-18 {
+                        font-size: 18px;
+                        margin-bottom: 0;
+                    }
+                }
+
+                .box-sm-body {
+                    .onresp {
+                        label {
+                            color: #fff;
+                        }
+                    }
+                }
+
+                label {
+                    position: relative;
+
+                    input {
+                        float: left;
+                    }
+
+                    a {
+                        display: block;
+
+                        &:hover {
+                            .fontRoboto;
+                        }
+                    }
+                }
+
+                .onresp {
+                    a {
+                        color: #e3a000;
+
+                        &:hover {
+                            .fontRoboto;
+                        }
+                    }
+                }
+            }
+
+            .forgot-password-header {
+                color: #fff;
+                font-size: 16px;
+                text-align: center;
+                line-height: 150%;
+            }
+
+            .forgot-password-body-1 {
+                color: #fff;
+                text-align: left;
+            }
+
+            .forgot-password-body-2 {
+                .forgot-password-body-1;
+            }
+
+            .enPortal-button{
+                border-radius: 15px;
+            }
+
+            .help-tab-header {
+                .forgot-password-header;
+            }
+
+            .body-p-left {
+                .forgot-password-body-1;
+
+                .goBlue {
+                    color: @light-blue;
+                }
+            }
+
+            .system-message-header {
+                font-size: 16px;
+                text-align: center;
+                line-height: 150%;
+                .fontRobotoBold;
+                color: #fff;
+                padding-bottom: 15px;
+                text-transform: uppercase;
+            }
+
+            &.reward-animation {
+                &.animation-v1 {
+                    background-color: #000000 !important;
+                    border: none !important;
+                }
+            }
+
+            a {
+                cursor: pointer;
+            }
+        }
+    }
+
+    .animation-v1 {
+        #instant-reward-form {
+            .lbxgrid-content-header {
+                .lbxgrid-completed-header-title {
+                    .fontRobotoBold;
+                    font-weight: bold;
+                    font-size: 40px;
+                    text-transform: uppercase;
+                    line-height: normal;
+                    color: #ffffff;
+
+                    @media (max-width: 414px) {
+                        font-size: 26px;
+                    }
+                }
+
+                .lbxgrid-completed-you-won-text {
+                    .fontRoboto;
+                    font-size: 24px;
+                    text-transform: capitalize;
+                    font-weight: normal;
+                    padding: 10px 0;
+                    color: #ffffff;
+
+                    @media (max-width: 414px) {
+                        font-size: 20px;
+                    }
+                }
+            }
+
+            .lbxgrid-content-display-body {
+                min-height: auto !important;
+
+                .reward-list-group-item {
+                    .reward-list-points {
+                        color: #ffffff;
+                        font-size: 30px;
+                        line-height: normal;
+                        text-transform: uppercase;
+                        white-space: nowrap;
+
+                        @media (max-width: 499px) {
+                            line-height: normal;
+                            white-space: unset;
+                        }
+
+                        @media (max-width: 414px) {
+                            font-size: 22px;
+                        }
+
+                        .goBlue {
+                            color: @light-blue;
+                        }
+                    }
+
+                    .reward-list-drawing-entries {
+                        .reward-list-points;
+
+                        .drawing-entries {
+                            color: @lockitlink-darkyellow !important;
+                        }
+                    }
+                }
+
+                .additional-copy {
+                    .fontRoboto;
+                    color: #fff;
+                    font-size: 18px;
+                    line-height: 130%;
+                }
+            }
+        }
+    }
+
+    &.custom-wordsearch {
+        .lbxgrid-wrapper {
+            .lbxgrid-close {
+                &.xclose {
+                    span {
+                        margin-top: -40px !important; /* Prevents overrides on lower resolution. */
+                    }
+                }
+            }
+
+            @media (max-width: 425px) {
+                padding: 28px !important;
+            }
+
+            .lbxgrid-content {
+                .lbxgrid-box {
+                    padding: 0;
+
+                    @media (max-width: 425px) {
+                        padding: 0 !important;
+                    }
+
+                    .lbxgrid-md {
+                        .-md-top {
+                            display: none;
+                        }
+
+                        .-md-content {
+                            min-width: 300px;
+                            background-color: #000000;
+
+                            @media (max-width: 365px) {
+                                min-width: unset;
+                            }
+
+                            .html5game {
+                                @media (max-width: 425px) {
+                                    margin-top: 15px;
+                                }
+                            }
+
+                            #games-completed-response {
+                                color: #ffffff;
+
+                                .game-completed-header {
+                                    .instant-reward-header;
+
+                                    @media (max-width: 660px) {
+                                        font-size: 40px;
+                                    }
+                                    @media (max-width: 540px) {
+                                        font-size: 35px;
+                                    }
+                                    @media (max-width: 480px) {
+                                        font-size: 30px;
+                                    }
+                                    @media (max-width: 360px) {
+                                        font-size: 25px;
+                                    }
+                                    @media (max-width: 300px) {
+                                        font-size: 20px;
+                                    }
+                                }
+
+                                .game-completed-body {
+                                    .instant-reward-subheader;
+                                    font-size: 28px;
+                                    line-height: 120%;
+                                }
+
+                                .game-completed-body-small {
+                                    .game-completed-body;
+                                    font-size: 20px;
+                                    display: inline-block;
+                                    padding: inherit;
+                                    margin: 0;
+                                    text-align: center;
+                                }
+                                .game-completed-padding {
+                                    margin: 20px;
+                                }
+
+                                .completed-header-title {
+                                    .fontRobotoBold;
+                                    font-weight: bold;
+                                    font-size: 30px;
+                                    text-transform: uppercase;
+                                    line-height: normal;
+
+                                    @media (max-width: 414px) {
+                                        font-size: 26px;
+                                    }
+
+                                    .goBlue {
+                                        color: @light-blue;
+                                    }
+                                }
+
+                                .completed-you-won-text {
+                                    .fontRoboto;
+                                    font-size: 22px;
+                                    text-transform: capitalize;
+                                    font-weight: normal;
+                                    padding: 10px 0;
+
+                                    @media (max-width: 414px) {
+                                        font-size: 20px;
+                                    }
+                                }
+
+                                .goBlue {
+                                    color: @light-blue;
+                                }
+
+                                .modal-body-style {
+                                    font-weight: 400;
+                                }
+
+                                .reward-list-group-item {
+                                    .reward-list-points {
+                                        color: #ffffff;
+                                        font-size: 30px;
+                                        line-height: normal;
+                                        text-transform: uppercase;
+                                        white-space: nowrap;
+
+                                        @media (max-width: 499px) {
+                                            line-height: normal;
+                                            white-space: unset;
+                                        }
+
+                                        @media (max-width: 414px) {
+                                            font-size: 22px;
+                                        }
+                                    }
+
+                                    .reward-list-drawing-entries {
+                                        .reward-list-points;
+
+                                        .drawing-entries {
+                                            color: @lockitlink-darkyellow !important;
+                                        }
+                                    }
+                                }
+
+                                .additional-copy {
+                                    font-size: 16px;
+                                    font-weight: 400;
+                                    line-height: inherit;
+                                    padding: 10px 0;
+                                }
+
+                                .space10 {
+                                    padding: 10px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

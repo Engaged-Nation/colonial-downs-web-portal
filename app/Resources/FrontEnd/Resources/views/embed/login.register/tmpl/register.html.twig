@@ -1,0 +1,122 @@
+<div class="tmpl-register" style="max-width: 450px;">
+    <form id="doregister" method="get" autocomplete="off" style="min-width: 200px;">
+        {{ 'fzone.register.title'|trans({'%amount%': points_per_register, '%currency%': points, '%property%': cname, '%program%': constant('program') is defined ? constant('program') : ""}, 'frontend')|raw }}
+        {{ 'fzone.register.description'|trans({'%amount%': points_per_register, '%currency%': points, '%property%': cname, '%program%': constant('program') is defined ? constant('program') : ""}, 'frontend')|raw }}
+
+        <div style="overflow: hidden; height: 0;">
+            <input type="text"/>
+            <input type="password"/>
+        </div>
+
+        <div>
+            <div class="onresp">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="First Name" name="fname">
+                </div>
+            </div>
+
+            <div class="onresp">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Last Name" name="lname">
+                </div>
+            </div>
+
+            {% include 'FrontEnd/Resources/views/terms-and-conditions.html.twig' with {'hasTerms': 'true', 'data': data} %}
+
+            <div id="nregister-out"></div>
+            <div class="modal-button-wrapper">
+                <button type="submit" class="button nregister modal-button-style en-button-animations-shrink-effect" data-gtm-dimension="Register/Register_Button">REWARD ME!</button>
+            </div>
+
+            <input type="hidden" name="embed" value="login.register"/>
+            <input type="hidden" name="submit" value="true"/>
+            <input type="hidden" name="redirect" value="{{ returnlogreg }}" />
+
+            {% if invitefid %}
+                <input type="hidden" name="invitedfid" value="{{ invitefid }}" />
+            {% endif %}
+
+            <input type="hidden" name="action" value="register.atlantis" />
+            <input type="hidden" name="nickname" value="" maxlength="50" />
+        </div>
+    </form>
+</div>
+
+<script>
+    EngagedNation.RequireJS.require(
+        ["jquery_1_10"],
+        function($)
+        {
+            "use strict";
+
+            $(function () {
+                /* remove old name spacing */
+                $('#doregister').find('.col-xs-4').removeClass('col-xs-4').addClass('col-xs-4');
+                $('#doregister').find('.row').removeClass('row').addClass('row');
+                $('#doregister').find('.form-control-ex').removeClass('form-control-ex').addClass('form-control-ex');
+
+                /* set defaults for dob so they have to choose */
+                /* first lets remove existing selected option */
+                $('select[name="dob[]"]').find('option:selected').removeAttr("selected");
+
+                $('#doregister label').on('click', function () {
+                    if ($(this).find('input[type=checkbox]').is(':checked')) {
+                        $(this).find('.box-sm-scroll').fadeIn();
+                    }
+                    else {
+                        $(this).find('.box-sm-scroll').fadeOut();
+                    }
+                });
+
+                $('#doregister').on('submit', function(e) {
+                    var this_ = $(this);
+                    e.preventDefault();
+
+                    $('.tmpl-register .msg_box_error').fadeOut().remove();
+
+                    $('input[value="Register"]').fadeOut();
+                    $('.lbxgrid #nregister-out').html('<div class="goCenter;"><img src="{{ gifloading|e("js") }}" /></div>');
+                    $(this).find('input[name="nickname"]').val('lil' + ((new Date()).getTime()).toString().substring(3, 15));
+
+                    $.ajax({
+                        dataType: 'jsonp',
+                        jsonp: 'callback',
+                        data: this_.serialize(),
+                        cache: false,
+                        url: '{{ fhost|e("js") }}/embed/index.php?id={{ id|e("js") }}&pageid={{ pageid|e("js") }}',
+                        success: function (data) {
+                            $('.lbxgrid #nregister-out').html(data.html);
+                            $('input[value="Register"]').fadeIn();
+                        }
+                    });
+                });
+
+                if (!EngagedNation.Callback.hasOwnProperty('LogOutRegisterAuto')) {
+                    EngagedNation.Callback.LogOutRegisterAuto = function() {
+                        EngagedNation.RequireJS.require(
+                            ["jquery"],
+                            function ($) {
+                                $(document).trigger(
+                                    $.Event(
+                                        "click",
+                                        {
+                                            "engagedNation": {
+                                                "data-gtm-action": "open",
+                                                "data-gtm-dimension": "Register_Auto"
+                                            }
+                                        }
+                                    )
+                                );
+                            }
+                        );
+                    };
+
+                    EngagedNation.Callback.LogOutRegisterAuto();
+                    $('.loginButtonWrapper .onregister').fadeIn();
+                }
+
+                $.lbxtooltip();
+            });
+        }
+    );
+</script>

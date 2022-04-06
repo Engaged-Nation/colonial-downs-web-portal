@@ -1,0 +1,410 @@
+@import (reference) "master.less";
+
+.loginForm {
+    #account {
+        &.logged-out-account {
+            padding: 0;
+
+            .logout-page {
+                text-align: center;
+
+                .logout-page-logo-div {
+                    img {
+                        display: inline-block;
+                    }
+                }
+            }
+
+            h1 {
+                color: #000000;
+
+                &:nth-of-type(even) {
+                    margin-bottom: -20px;
+                }
+            }
+
+            .logged-out-subheadline {
+                .fontOpenSans;
+                font-weight: bold;
+                font-size: 30px;
+                text-transform: initial;
+                text-align: center;
+                color: #000000;
+                line-height: 1em;
+
+                &:nth-of-type(2) {
+                    margin: 0 auto -20px auto;
+                    .fontOpenSans;
+                }
+
+                &:nth-of-type(4) {
+                    margin: -20px auto 20px auto;
+                    text-transform: uppercase;
+                }
+            }
+
+            .loggedout-form-header-logo {
+                margin: 30px;
+                text-align: center;
+
+                img {
+                    display: inline-block;
+                }
+
+                @media (max-width: 999px) {
+                    display: block !important;
+                    margin: 30px !important;
+                }
+            }
+
+            .loginFormOverride {
+                max-width: 535px;
+                margin: 0 auto;
+
+                &.hard {
+                    max-width: 600px;
+
+                    img {
+                        margin-bottom: 30px;
+                    }
+                }
+
+                .logged-out-field {
+                    background: #fbf3b0;
+                }
+
+                .logged-out-links {
+                    .fontOpenSans;
+                    color: #0038b8;
+                    text-transform: uppercase;
+                    cursor: pointer;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+
+                    &.onregister {
+                        text-align: right;
+                    }
+                }
+
+                .logoutFormTitle {
+                    font-size: 20px !important;
+                    color: #000000;
+                    line-height: initial !important;
+                    text-align: center;
+                    text-transform: uppercase;
+
+                    @media (max-width: 600px) {
+                        font-size: 4.4vw !important;
+                    }
+                    @media (max-width: 400px) {
+                        font-size: 18px !important;
+                    }
+                }
+
+                .logout-headline {
+                    .logoutFormTitle;
+                    color: #0038b8 !important;
+                }
+
+                .logout-soft-body {
+                    strong {
+                        .fontOpenSans;
+                        font-weight: bold;
+                    }
+                }
+
+                .loginButtonWrapper {
+                    margin: 15px 0;
+                    text-align: center;
+
+                    input,
+                    button {
+                        min-width: 145px;
+                        text-transform: uppercase;
+                    }
+
+                    button {
+                        background-color: #c21b8e;
+                        border: none;
+                    }
+                }
+                .registerButtonWrapper {
+                    .loginButtonWrapper;
+                }
+                .enPortal-fa {
+                    &.enPortal-fa-user-o {
+                        padding-left: 2px;
+                    }
+                }
+
+                .input-group {
+                    margin-bottom: 10px;
+
+                    .input-group-addon {
+                        border: none;
+                    }
+                }
+
+                .forgotpassword {
+                    &.showCursor {
+                        &.decorationUnderline {
+                            color: #000000;
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+        }
+        .copyrightCopy {
+            text-align: center;
+        }
+    }
+}
+
+.displayFlex {
+    display: flex;
+}
+
+.clearBoth {
+    clear: both;
+}
+
+.positionRelative {
+    position: relative;
+}
+
+.rowAboveHeaderTheme {
+    position: relative;
+    z-index: 1;
+    background-color: @base-bg-color;
+    display: none;
+}
+
+.rowBelowHeaderTheme {
+    position: relative;
+    z-index: 2;
+    margin: 0;
+
+    .logout-page-title {
+        font-size: 35px;
+        .fontOpenSans;
+        font-weight: bold;
+    }
+
+    .logout-page-details {
+        font-size: 20px;
+    }
+
+    .header-text {
+        .fontOpenSans;
+        font-weight: bold;
+        position: absolute;
+        z-index: 99;
+        top: 3%;
+        width: 29%;
+        text-align: center;
+        left: 42%;
+
+        @media (max-width: 767px) {
+            top: 1%;
+        }
+
+        h3 {
+            .fontOpenSans;
+            font-weight: bold;
+            text-align: center;
+            line-height: 1.2em;
+            font-size: 32px;
+
+            @media (max-width: 1199px) {
+                font-size: 28px;
+            }
+
+            @media (max-width: 991px) {
+                font-size: 22px;
+            }
+
+            @media (max-width: 776px) {
+                font-size: 3vw;
+            }
+
+            > span {
+                .fontOpenSans;
+                font-size: 48px;
+                clear: both;
+                display: block;
+                font-weight: 900;
+                line-height: 1;
+
+                @media (max-width: 1199px) {
+                    font-size: 36px;
+                }
+
+                @media (max-width: 991px) {
+                    font-size: 28px;
+                }
+
+                @media (max-width: 767px) {
+                    font-size: 3.5vw;
+                }
+            }
+        }
+
+        @media (max-width: 465px) {
+            top: 1%;
+        }
+    }
+}
+
+.centerMarginMagic {
+    margin: 0 auto;
+}
+
+#doregister {
+    .register-headline {
+        .fontRobotoBold;
+        font-size: 24px;
+        color: #fff;
+        line-height: 120%;
+        margin-bottom: 20px;
+
+        .logo {
+            margin: 0 auto;
+        }
+
+        .register-voucher-title {
+            color: #c21b8e;
+            font-size: 30px;
+        }
+
+        .register-cname {
+            font-size: 20px;
+        }
+    }
+
+    .register-body {
+        .fontRoboto;
+        font-size: 16px;
+        color: #ffffff;
+        margin-bottom: 20px;
+    }
+
+    .registration-subheadline {
+        .fontRoboto;
+        font-size: 10px;
+        color: #ffffff;
+    }
+
+    .box-sm-body {
+        .registration-subheadline;
+    }
+
+    .input-group {
+        margin: 0 auto 10px auto;
+    }
+
+    .box-sm-body {
+        .onresp {
+            text-align: center !important;
+        }
+    }
+
+    .loggedout-terms-and-conditions {
+        .fontRoboto;
+        color: #c21b8e !important;
+        text-decoration: underline;
+        cursor: pointer;
+        font-size: 10px;
+        margin-bottom: 10px;
+        display: inline-block !important;
+    }
+
+    .rewards-card-info {
+        color: #e51c23;
+        cursor: pointer;
+    }
+
+    .birthdate-info {
+        .rewards-card-info;
+    }
+
+    .optin-info {
+        .rewards-card-info;
+    }
+
+    .msg_box_error {
+        background-color: #600d09;
+        border-radius: 4px;
+        color: #fff;
+        padding: 5px 10px;
+        text-shadow: 0 1px 0 #333;
+        margin-bottom: 10px;
+    }
+}
+
+/**
+* For logged out view, nice lil trick to make the page vertically aligned.
+**/
+.height100 {
+    height: 100%;
+}
+
+html {
+    &.logged-out {
+        .height100;
+
+        body {
+            .height100;
+
+            .takeover {
+                .height100;
+
+                .container {
+                    &.main-container {
+                        .height100;
+
+                        #page_outer_wrap {
+                            .height100;
+
+                            #body_wrap {
+                                .height100;
+
+                                #page_wrap {
+                                    .height100;
+
+                                    .embed {
+                                        .height100;
+
+                                        #fzone {
+                                            .height100;
+
+                                            .rowBelowHeaderTheme {
+                                                .height100;
+                                                display: table;
+                                                width: 100%;
+
+                                                .loginForm {
+                                                    .height100;
+                                                    display: table;
+                                                    width: 100%;
+
+                                                    #account {
+                                                        .height100;
+                                                        display: table-cell;
+                                                        vertical-align: middle;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

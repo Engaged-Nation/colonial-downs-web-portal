@@ -1,0 +1,50 @@
+@import (reference) "master.less";
+
+.button {
+    .fontRobotoCondensedBold;
+    color: #f3af4d;
+    letter-spacing: -0.22px;
+    border-radius: 8.1px;
+    box-shadow: 2px 2px 0 0 #000000, inset 0 2px 2px 0 rgba(0, 0, 0, 0.5);
+    border: solid 4px #f3af4d;
+    background-image: linear-gradient(to bottom, #5b1c0c, #5b1c0c), linear-gradient(to bottom, #033d68 32%, #1782bb 99%);
+    text-transform: uppercase;
+}
+
+.button:hover,
+.button:focus,
+.button.focus,
+.button:active,
+.button.active,
+.btn-default:focus,
+.btn-default:active,
+.btn-default:hover,
+.btn-default:active:hover,
+.btn-default:active:focus,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary:hover,
+.btn-primary:active:hover,
+.btn-primary:active:focus {
+    background-color: transparent !important;
+    border-color: #5b1c0c;
+    color: #5b1c0c !important;
+    background-image: linear-gradient(to bottom, #f3af4d, #f3af4d), linear-gradient(to bottom, #033d68 32%, #1782bb 99%);
+    outline: 0;
+}
+
+.enPortal-button,
+.btn-default,
+.btn-primary,
+.modal-button-style,
+#viewMyVouchersButton,
+#fzone #activityTab .sub-menutab button,
+#template-profile-form-button-rules,
+#template-profile-form-button-submit,
+#template-sitefeedback-form-button-submit {
+    &:extend(.button);
+}
+
+#viewMyVouchersButton {
+    padding: 5px 15px;
+}

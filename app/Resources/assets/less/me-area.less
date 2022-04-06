@@ -1,0 +1,166 @@
+@import (reference) "master.less";
+
+#account {
+    img.player-dashboard {
+        width: 100%;
+    }
+
+    .brand-logo {
+        display: block;
+        text-align: center;
+
+        img {
+            display:inline-block;
+        }
+    }
+
+    .profile {
+        margin: 0;
+        text-align: center;
+        background: @base-bg-color;
+        color: @base-font-color;
+
+        .inbox {
+            position: relative;
+
+            .unread {
+                position: absolute;
+                z-index: 1;
+                margin-top: -22px;
+                background-color: @base-bg-color;
+                padding: 2px 8px;
+                border-radius: 5px;
+                color: @base-font-color;
+                box-shadow: 0 1px 3px rgba(51, 51, 51, 0.5);
+            }
+        }
+
+        .-fname {
+            font-size: 42px;
+            text-align: center;
+            font-weight: bold;
+            padding-bottom: 15px;
+            margin-top: -30px;
+        }
+
+        .delsolLogo {
+            display: inline;
+        }
+
+        .delsolLogoName {
+            margin: 0 auto;
+        }
+
+        .user-points-display-wrapper {
+            .fontOpenSans;
+            font-weight: bold;
+            font-size: 33px;
+            text-transform: uppercase;
+            color: @base-font-color;
+            padding: 10px;
+
+            @media(max-width: 414px) {
+                font-size: 18px;
+            }
+
+            .-points {
+                line-height: 120%;
+                text-align: right;
+                color: @base-font-color;
+                margin-right: 0;
+                margin-top: 50px;
+
+                @media (max-width: 414px) {
+                    margin-top: 0;
+                }
+
+                a {
+                    .fontOpenSans;
+                    font-weight: bold;
+                    color: @base-font-color;
+                }
+
+                .-value {
+                    text-align: center;
+                }
+
+                .sm {
+                    text-transform: uppercase;
+                }
+            }
+
+            .-drawing-entries {
+                .-points;
+                text-align: center;
+
+                .-value {
+                    text-align: center;
+
+                    .sm {
+                        font-weight: normal;
+                    }
+                }
+            }
+
+            a {
+                &:hover {
+                    color: @base-font-color;
+                    text-decoration: none;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .gray-line {
+            max-width: 1440px;
+            height: 20px;
+            opacity: 0.8;
+            background-color: #a89582;
+            margin-top: 10px;
+
+            @media (max-width: 1199px) {
+                width: 100vw;
+                @pad: 50vw;
+                left: calc(~'50% - @{pad}');
+            }
+
+            @media (max-width: 414px) {
+                margin-top: 0;
+            }
+
+            @media (max-width: 414px) {
+                height: 15px;
+            }
+        }
+
+        .logoImage {
+            display: inline-block;
+        }
+
+        .orange-line {
+            @media (max-width: 414px) {
+                height: 3px;
+                border: solid 3px #cd6e1f;
+                margin-bottom: 15px;
+            }
+        }
+
+        .grp-btns {
+            margin-top: 10px;
+
+            .btns {
+                display: inline-block;
+                font-size: 10px;
+                padding: 2px;
+                text-align: center;
+                min-height: 87px;
+
+                .button {
+                    margin: 5px !important;
+                    border: none;
+                    box-shadow: none;
+                }
+            }
+        }
+    }
+}

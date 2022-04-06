@@ -1,0 +1,337 @@
+@import (reference) "master.less";
+
+#myvouchersAndRewards {
+    .my-vouchers-rewards {
+        .switchp {
+             display: none;
+        }
+
+        #printable-vouchers {
+            padding-inline-start: 0;
+
+            .printme {
+                p {
+                    margin: 0;
+                    line-height: 1.1em;
+                    font-size: 16px;
+                }
+            }
+
+            li {
+                border: 1px solid #565656;
+                border-left: 10px solid #5EA95E;
+                padding: 10px 10px 10px 15px;
+                display: block;
+                float: none !important;
+                border-bottom: 1px dashed #a9a9a9;
+
+                &.today {
+                    border-left: 10px solid #ce4844;
+                }
+
+                &.soon {
+                    border-left: 10px solid orange;
+                }
+
+                h3 {
+                    font-size: 22px;
+                    margin-bottom: 15px;
+                    text-transform: uppercase;
+                }
+
+                .goGold {
+                    font-weight: bold;
+                }
+
+                p {
+                    text-align: left;
+                }
+
+                .btn-tools-wrapper {
+                    display: block;
+                }
+
+                @media (max-width: 414px) {
+                    padding: 0;
+
+                    .printme {
+                        padding: 10px 10px 0 10px;
+
+                        h3 {
+                            font-size: 18px;
+                            margin-bottom: 10px;
+                        }
+
+                        p {
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
+
+            @media (max-width: 767px) {
+                display: table-row-group;
+            }
+        }
+
+        .back-to-home-btn {
+            text-align: center;
+            margin-bottom: 40px;
+
+            button {
+                width: 210px;
+            }
+        }
+
+        .btn-tools-wrapper {
+            button {
+                display: inline-block;
+                width: 275px;
+            }
+        }
+
+        .havingtrouble {
+            display: none;
+        }
+    }
+}
+
+#rewardsAndMyvouchers {
+    .bg-shelf {
+        .content-max-width {
+            .redeem-headline {
+                font-size: 32px;
+                color: #0038b8;
+                text-transform: uppercase;
+                margin: 0;
+            }
+
+            .redeem-subheadline {
+                .fontOpenSans;
+                color: #000;
+                font-size: 26px;
+                text-transform: initial;
+                text-align: center;
+            }
+
+            .voucher-button-wrapper {
+                margin: 20px 0 30px 0;
+            }
+        }
+
+        #redeem {
+            ul {
+                &.noselect {
+                    text-align: center;
+                    width: 100%;
+
+                    li {
+                        &.darkblue {
+                            background: #FFFFFF;
+                            box-shadow: 0 0 5px 2px #999999;
+                            float: none;
+                            width: 200px;
+                            display: inline-block;
+                            margin: 10px 4px;
+
+                            > div {
+                                margin: 0 !important;
+                            }
+
+                            .game-name {
+                                padding-top: 20px;
+                                font-size: 18px;
+                            }
+
+                            .box-bg {
+                                .earn-title {
+                                    .fontOpenSans;
+                                    font-weight: bold;
+                                    padding: 5px;
+                                    color: #000000;
+                                    height: 65px;
+                                    font-size: 14px;
+                                    text-transform: uppercase;
+                                    margin-bottom: 10px;
+                                }
+
+                                .earn-price {
+                                    .fontOpenSans;
+                                    font-weight: bold;
+                                    color: #e3a000;
+                                    font-size: 14px;
+                                    margin-bottom: 10px;
+                                    text-transform: uppercase;
+                                }
+                            }
+
+                            .voucher-wrapper {
+                                .box-circles-bg {
+                                    .item-wrap {
+                                        margin: 20px auto;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .notextshadow {
+                .redeem-h4 {
+                    .fontOpenSans;
+                    font-weight: bold;
+                    font-size: 32px;
+                    color: @lockitlink-mediumblue;
+                    text-transform: uppercase;
+                    text-align: center;
+                    font-style: oblique;
+                }
+
+                p {
+                    padding: 0 80px;
+                }
+            }
+        }
+    }
+
+    #myvouchersAndRewards {
+        .my-vouchers-rewards {
+            font-size: 26px;
+            text-align: center;
+
+            > div {
+                margin-bottom: 30px !important;
+                float:none !important;
+                text-align: center;
+            }
+
+            #printable-vouchers {
+                padding: 0;
+                padding-inline-start: 0;
+
+                li {
+                    border: 1px solid #565656;
+                    border-left: 10px solid #5EA95E;
+                    padding: 10px 10px 10px 15px;
+                    display: block;
+                    float: none !important;
+                    border-bottom: 1px dashed #a9a9a9;
+
+                    &.today {
+                        border-left: 10px solid #ce4844;
+                    }
+
+                    &.soon {
+                        border-left: 10px solid orange;
+                    }
+
+                    h3 {
+                        font-size: 22px;
+                        margin-bottom: 15px;
+                    }
+
+                    .printme {
+                        h3 {
+                            .fontOpenSans;
+                            font-weight: bold;
+                            color: #0038b8;
+                            margin-top: 0;
+                            line-height: 1.2em;
+                        }
+
+                        p {
+                            text-align: left;
+                            margin: 0;
+
+                            span {
+                                font-weight: bold;
+                            }
+                        }
+                    }
+
+                    .goGold {
+                        .fontOpenSans;
+                        font-weight: bold;
+                        color: #000000;
+                    }
+
+                    .btn-tools {
+                        .btn-tools-wrapper {
+                            .modal-button-style {
+                                &:hover {
+                                    &:before {
+                                        transform: skewX(-45deg) translateX(20em);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .modal-button-style {
+                &:hover {
+                    &:before {
+                        transform: skewX(-45deg) translateX(17.5em);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.buy-voucher {
+    background: #A97630;
+    color: #0038b8;
+    padding: 5px 15px;
+    border: none !important;
+}
+
+#rewards-page-coming-soon {
+    .row {
+        margin: 0;
+    }
+
+    .h2-subheadline {
+        .fontOpenSans;
+        font-weight: bold;
+        font-size: 28px;
+        line-height: 1em;
+        display: block;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .coming-soon-details {
+        font-size: 20px;
+        font-weight: 100;
+        margin: 0 50px;
+        text-align: center;
+    }
+}
+
+#rewards-page-top-section {
+    .h2-subheadline {
+        #rewards-page-coming-soon .h2-subheadline;
+    }
+
+    .rewards-page-details {
+        #rewards-page-coming-soon .coming-soon-details;
+        margin: 20px 50px;
+    }
+}
+
+#activityTab {
+    .myvoucher-header-wrapper {
+        .h1-headline-smaller {
+            margin-bottom: 30px;
+        }
+
+        .details {
+            .body-p {
+                margin-bottom: 35px;
+            }
+        }
+    }
+}

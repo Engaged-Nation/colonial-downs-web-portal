@@ -1,0 +1,159 @@
+@import (reference) "master.less";
+
+#component-profile-form {
+    .myprofile-container {
+        max-width: 700px;
+        margin: 0 auto;
+
+        #tab-accordion {
+            max-width: 700px;
+            margin: 0 auto;
+
+            .tab-header {
+                .h1-headline-smaller {
+                    margin-bottom: 10px;
+                }
+
+                .tab-content-body {
+                    font-size: 18px;
+
+                    .enPortal-input-group {
+                        max-width: 456.66px;
+                        margin: 0 auto;
+                    }
+
+                    #playerscardupdate {
+                        .enPortal-form-group {
+                            .playerscard-button-wrapper {
+                                text-align: left;
+                                margin: 0 -5px;
+
+                                @media (max-width: 767px) {
+                                    text-align: center;
+                                    margin: unset;
+                                }
+                                .modal-button-style {
+                                    &:hover {
+                                        &:before {
+                                            transform: skewX(-45deg) translateX(19.5em);
+                                            transition: all 0.5s ease-in-out;
+                                        }
+                                    }
+                                }
+                            }
+
+                            @media (max-width: 767px) {
+                                padding: 0 15px;
+                            }
+                        }
+
+                        .players-card-input {
+                            .enPortal-input-group-addon {
+                                background-color: #f0f0f0 !important;
+                            }
+                        }
+
+                        #playerscardupdatebutton {
+                            @media (max-width: 425px) {
+                                font-size: 18px !important;
+                            }
+
+                            @media (max-width: 356px) {
+                                font-size: 15px !important;
+                            }
+                        }
+                    }
+
+                    .profile-buttons-wrapper {
+                        .modal-button-style {
+                            margin: 10px 5px;
+                        }
+
+                        #rules-terms-button {
+                            display: inline-block;
+                        }
+                    }
+
+                    #editmyprofile {
+                        .enPortal-form-group {
+                            .enPortal-form-control {
+                                max-width: 456.66px;
+                                margin: 0 auto;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .h1-headline {
+        &.myProfile-playersCard-information {
+            display: inline-block;
+        }
+    }
+
+    .h1-headline {
+        &.myProfile-profile-information {
+            display: inline-block;
+            margin: 15px 0 20px 0;
+        }
+    }
+
+    #playersCardWrapper {
+        margin: 0 -15px 0 0;
+
+        .players-number-label {
+            margin: 0 0 0 -27px;
+        }
+
+        .players-card-input {
+            padding: 0 36px 0 0;
+        }
+
+        .update-players-card-button {
+            text-align: left;
+            margin: 0 0 0 -15px;
+        }
+    }
+
+    .players-card-button {
+        @media screen and (max-width: 990px) {
+            margin-top: -30px;
+        }
+    }
+
+    input {
+        &.button {
+            padding: 5px 15px;
+
+            @media screen and (max-width: 510px) {
+                margin: 0 0 10px 0;
+            }
+        }
+    }
+
+    #topActivities {
+        color: #0038b8;
+
+        .top-activities {
+            vertical-align: middle;
+        }
+
+        .top-activities-points {
+            white-space: nowrap;
+        }
+
+        .top-activities-date {
+            width: 31%;
+        }
+
+        .top-activities-no-activity-found {
+            margin-bottom: 10px;
+        }
+    }
+
+    .terms-and-conditions-button-div {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+}

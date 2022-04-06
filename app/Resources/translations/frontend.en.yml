@@ -35,7 +35,7 @@ fzone:
       experience: ""
 
   termsAndCondtions:
-    input1: "I agree to the <a class=\"loggedout-terms-and-conditions\" href=\"https://colonial-downs-uploads.s3-us-west-2.amazonaws.com/images/pdf/rules-terms.pdf\" target=\"_blank\">terms and conditions</a>."
+    input1: "I agree to the <a class=\"loggedout-terms-and-conditions\" href=\"https://colonial-downs-web-uploads.s3-us-west-2.amazonaws.com/images/pdf/rules-terms.pdf\" target=\"_blank\">terms and conditions</a>."
 
 
   #
@@ -90,7 +90,7 @@ fzone:
   register:
     title: "<div class=\"register-headline\">
       <div>
-        <img class=\"img-responsive logo\" src=\"https://colonial-downs-uploads.s3-us-west-2.amazonaws.com/images/home/Altantis-355x215.png\">
+        <img class=\"img-responsive logo\" src=\"https://colonial-downs-web-uploads.s3-us-west-2.amazonaws.com/images/home/Altantis-355x215.png\">
       </div>
       GET YOUR CHOICE OF
       <div class=\"register-voucher-title\">$10 FREE SLOT PLAY</div> OR <div class=\"register-voucher-title\">2-FOR-1 BUFFET</div>

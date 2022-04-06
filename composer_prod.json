@@ -1,6 +1,6 @@
 {
-    "name": "engaged-nation/colonial-downs-portal",
-    "description": "Tachi Tablet Portal Site",
+    "name": "engaged-nation/colonial-downs-web-portal",
+    "description": "Colonial Downs Web Portal Site",
     "type": "project",
     "require": {
         "php": "^5.6",

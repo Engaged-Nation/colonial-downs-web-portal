@@ -1,5 +1,5 @@
 /**
- * Tachi Tablet version of lbxtooltip
+ * Colonial Downs Web version of lbxtooltip
  *
  * @author Erin Nire <erin@engagednation.com>
  */

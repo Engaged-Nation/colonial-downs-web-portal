@@ -58,6 +58,6 @@ class ConfigClient extends AbstractConfigClient
      */
     public static function getClientAlias()
     {
-        return 'colonial-downs';
+        return 'colonial-downs-web';
     }
 }

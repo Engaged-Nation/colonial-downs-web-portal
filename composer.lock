@@ -944,12 +944,12 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:Engaged-Nation/doctrine-portal.git",
-                "reference": "037eb43c3fc5ebb4554b9234668ed5a106c663ba"
+                "reference": "c8da50cc98ebacd1e2f5eb23c0e4624a0224bcdc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Engaged-Nation/doctrine-portal/zipball/037eb43c3fc5ebb4554b9234668ed5a106c663ba",
-                "reference": "037eb43c3fc5ebb4554b9234668ed5a106c663ba",
+                "url": "https://api.github.com/repos/Engaged-Nation/doctrine-portal/zipball/c8da50cc98ebacd1e2f5eb23c0e4624a0224bcdc",
+                "reference": "c8da50cc98ebacd1e2f5eb23c0e4624a0224bcdc",
                 "shasum": ""
             },
             "require": {
@@ -976,7 +976,7 @@
                 "source": "https://github.com/Engaged-Nation/doctrine-portal/tree/master",
                 "issues": "https://github.com/Engaged-Nation/doctrine-portal/issues"
             },
-            "time": "2022-02-14T19:38:26+00:00"
+            "time": "2022-05-10T16:24:43+00:00"
         },
         {
             "name": "engaged-nation/lib-central-admin-client",
@@ -1105,12 +1105,12 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:Engaged-Nation/portal-core.git",
-                "reference": "e76842e7b8bca02a9501251780d591c32fb6426c"
+                "reference": "cd7e49e8b115472aea9e96d9beb0e15933f7e5cd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Engaged-Nation/portal-core/zipball/e76842e7b8bca02a9501251780d591c32fb6426c",
-                "reference": "e76842e7b8bca02a9501251780d591c32fb6426c",
+                "url": "https://api.github.com/repos/Engaged-Nation/portal-core/zipball/cd7e49e8b115472aea9e96d9beb0e15933f7e5cd",
+                "reference": "cd7e49e8b115472aea9e96d9beb0e15933f7e5cd",
                 "shasum": ""
             },
             "require": {
@@ -1161,7 +1161,7 @@
                 "source": "https://github.com/Engaged-Nation/portal-core/tree/master",
                 "issues": "https://github.com/Engaged-Nation/portal-core/issues"
             },
-            "time": "2022-04-25T18:25:05+00:00"
+            "time": "2022-05-18T19:02:50+00:00"
         },
         {
             "name": "guzzlehttp/command",
